@@ -1,5 +1,5 @@
 import {getAuth, createUserWithEmailAndPassword} from "firebase/auth";
-import app from "./firebaseapp.js";
+import {app} from "./firebaseapp.js";
 
 const auth = getAuth(app);
 
@@ -11,6 +11,7 @@ export const createNewUser = async (email, password) => {
     else{
         try {
             const newUser = await createUserWithEmailAndPassword(auth, email, password);
+            alert("Sign up successful");
             return newUser.user;
         }
         catch (error) {
