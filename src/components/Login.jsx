@@ -17,7 +17,8 @@ export default function Login(){
         if(userPassword.length<6){
             alert("Password must be at least 6 characters");
         }
-        await signInUser(userEmail, userPassword);
+        const signedInUser = await signInUser(userEmail, userPassword);
+        sessionStorage.set('userid',signedInUser.id);
         setUserEmail("");
         setUserPassword("");
     };
