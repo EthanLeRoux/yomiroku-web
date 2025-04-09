@@ -1,9 +1,10 @@
 import AddNewAnimeEntry from "./AddNewAnimeEntry.jsx";
+import NavigationBar from "./NavigationBar.jsx";
 
 export default function Home(){
     return (
         <>
-            <h1>Yomiroku</h1>
+            <NavigationBar/>
             <AddNewAnimeEntry/>
         </>
     )
