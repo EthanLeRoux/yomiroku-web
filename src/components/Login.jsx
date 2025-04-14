@@ -19,6 +19,8 @@ export default function Login(){
         }
         const signedInUser = await signInUser(userEmail, userPassword);
         sessionStorage.setItem('userid',signedInUser.uid);
+        sessionStorage.setItem('email',signedInUser.email);
+        sessionStorage.setItem('username',signedInUser.username);
         alert("Login successfully");
         setUserEmail("");
         setUserPassword("");
