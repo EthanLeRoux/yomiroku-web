@@ -8,7 +8,8 @@ import NavigationBar from "./components/NavigationBar.jsx";
 import Profile from "./components/Profile.jsx";
 
 function App() {
-  return (
+
+    return (
     <>
         <Router>
             <NavigationBar/>

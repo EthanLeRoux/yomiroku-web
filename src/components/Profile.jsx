@@ -1,6 +1,8 @@
 import React from 'react';
+import Login from "./Login.jsx";
 
 export default function Profile() {
+
     const user = {
         name: 'John Doe',
         email: 'john@example.com',
@@ -9,15 +11,18 @@ export default function Profile() {
     };
 
     return (
-        <div style={styles.container}>
-            <div style={styles.card}>
-                <img src={user.avatar} alt="Avatar" style={styles.avatar} />
-                <h2>{user.name}</h2>
-                <p style={styles.email}>{user.email}</p>
-                <p style={styles.bio}>{user.bio}</p>
-                <button style={styles.button}>Edit Profile</button>
-            </div>
-        </div>
+        sessionStorage.getItem('userid')!==null?
+                <div style={styles.container}>
+                    <div style={styles.card}>
+                        <img src={user.avatar} alt="Avatar" style={styles.avatar} />
+                        <h2>{user.name}</h2>
+                        <p style={styles.email}>{user.email}</p>
+                        <p style={styles.bio}>{user.bio}</p>
+                        <button style={styles.button}>Edit Profile</button>
+                    </div>
+                </div>
+            :
+            <Login/>
     );
 };
 
@@ -31,7 +36,6 @@ const styles = {
         width: '320px',
         background: '#fff',
         borderRadius: '16px',
-        boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
         padding: '2rem',
         textAlign: 'center',
         fontFamily: 'sans-serif',
