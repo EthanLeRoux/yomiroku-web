@@ -22,7 +22,7 @@ export default function HamburgerMenu() {
                         padding: 10,
                     }}
                 >
-                    <div style={{ padding: 8 }} onClick={() => navigate('/newanime')}>Home</div>
+                    <div style={{ padding: 8 }} onClick={() => navigate('/newanime')}>New Anime Entry</div>
                     <div style={{ padding: 8 }} onClick={() => alert("Profile clicked")}>Profile</div>
                     <div style={{ padding: 8 }} onClick={() => alert("Logout clicked")}>Logout</div>
                 </div>
