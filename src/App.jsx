@@ -5,6 +5,7 @@ import Login from "./components/Login.jsx";
 import Home from "./components/Home.jsx";
 import AddNewAnimeEntry from "./components/AddNewAnimeEntry.jsx";
 import NavigationBar from "./components/NavigationBar.jsx";
+import Profile from "./components/Profile.jsx";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
             <NavigationBar/>
             <Routes>
                 <Route path="/" element={<Home/>}/>
+                <Route path="/profile" element={<Profile/>}/>
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/newanime" element={<AddNewAnimeEntry/>}/>
