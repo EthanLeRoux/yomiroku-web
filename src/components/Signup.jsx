@@ -1,5 +1,6 @@
 import {useState} from "react";
 import {createNewUser} from "../firebase/signup.js";
+import {Link} from "react-router-dom";
 
 export default function Signup(){
     const[userEmail, setUserEmail] = useState("");
@@ -35,7 +36,8 @@ export default function Signup(){
                 </p>
                 <input type={'submit'} value={"Sign Up"} className={"task_addbutton"}/>
             </form>
-
+            <br/>
+            <Link to={'/login'}>Already have account? Click here to login</Link>
         </>
     )
 }
