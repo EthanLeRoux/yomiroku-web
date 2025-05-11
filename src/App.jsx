@@ -6,6 +6,7 @@ import Home from "./components/Home.jsx";
 import AddNewAnimeEntry from "./components/AddNewAnimeEntry.jsx";
 import NavigationBar from "./components/NavigationBar.jsx";
 import Profile from "./components/Profile.jsx";
+import MyEntries from "./components/MyEntries.jsx";
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/newanime" element={<AddNewAnimeEntry/>}/>
+                <Route path="/myentries" element={<MyEntries/>}/>
             </Routes>
         </Router>
     </>

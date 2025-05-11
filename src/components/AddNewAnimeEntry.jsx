@@ -70,8 +70,6 @@ export default function AddNewAnimeEntry() {
 
                     <input type={"submit"} value={'Add Entry'} className={"anime-entry-submit"}/>
                 </form>
-
-
             </div>
         </>
     )

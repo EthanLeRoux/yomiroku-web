@@ -1,10 +1,11 @@
 import {useState} from "react";
 import {signInUser} from "../firebase/login.js";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 export default function Login(){
     const[userEmail, setUserEmail] = useState("");
     const[userPassword, setUserPassword] = useState("");
+    const navigate = useNavigate();
 
     const handleEmailChange = (e) => {
         setUserEmail(e.target.value);
@@ -25,6 +26,7 @@ export default function Login(){
         alert("Login successfully");
         setUserEmail("");
         setUserPassword("");
+        navigate("/login");
     };
 
     return(

@@ -2,6 +2,7 @@ import React from 'react';
 import Login from "./Login.jsx";
 
 export default function Profile() {
+const email = sessionStorage.getItem("email");
 
     const user = {
         name: 'John Doe',
@@ -16,8 +17,7 @@ export default function Profile() {
                     <div style={styles.card}>
                         <img src={user.avatar} alt="Avatar" style={styles.avatar} />
                         <h2>{user.name}</h2>
-                        <p style={styles.email}>{user.email}</p>
-                        <p style={styles.bio}>{user.bio}</p>
+                        <p style={styles.email}>{email}</p>
                         <button style={styles.button}>Edit Profile</button>
                     </div>
                 </div>
